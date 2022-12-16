@@ -10,7 +10,6 @@ export const ProductoItem = ({
   image,
   category,
   detalle,
-  cantidad
 }) => {
 
   const value = useContext(DataContext);
@@ -20,7 +19,7 @@ export const ProductoItem = ({
 
 
   return (
-    <div className='producto'>
+    <div key={id} className='producto'>
           <Link to={`/producto/${id}`} >
             <div className='producto__img'>
               <img src={image} alt={title} />
@@ -37,7 +36,7 @@ export const ProductoItem = ({
               Añadir al carrito
             </button>
             <div>
-              <Link to={`/producto/${id}`} className='btn'>Detalles</Link>
+              <Link to={`/producto/${id}`} className="btn">Vista</Link>
             </div>
           </div>
     </div>

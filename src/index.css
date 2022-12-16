@@ -292,3 +292,57 @@ header .cart span{
   color: wheat;
 }
 
+
+.detalles{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 13rem 1rem 0 1rem;
+  box-sizing: border-box;
+}
+.detalles h2{
+  font-size: 3.5rem;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family:Helvetica, sans-serif;
+  color: #1a202c;
+}
+.detalles .price{
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(227,25,19);
+}
+.detalles button{
+  max-width: 300px;
+  margin: 1rem 0 0 0;
+  padding: 1rem 1rem;
+  border: none;
+  outline: 0;
+  background-color: rgb(227,25,19);
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.detalles img{
+  min-height: 300px;
+  object-fit: contain;
+  margin-top:  -7rem;
+  z-index: -1;
+}
+
+.detalles .description{
+  font-size: 1.1rem;
+  max-width: 1300px;
+  width: 100%;
+  letter-spacing: 1px;
+  color: #5f5d5d;
+  margin: 0 auto;
+  font-weight: 500;
+}
+.detalles .description b{
+  font-size: 1.4rem;
+  color: #30333a;
+}

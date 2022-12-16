@@ -22,6 +22,7 @@ export const ProductosLista = () => {
               category={producto.category}
               detalle={producto.detalle}
               cantidad={producto.cantidad}
+              id={producto.id}
               />
             ))
           }
