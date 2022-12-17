@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, useState} from 'react'
-import { DataContext } from "context/DataProvider";
+import { DataContext } from "../../context/Dataprovider";
 import { useParams } from "react-router-dom";
 import { ProductoItem } from "./ProductoItem";
 
