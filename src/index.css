@@ -326,12 +326,7 @@ header .cart span{
   border-radius: 8px;
   cursor: pointer;
 }
-.detalles img{
-  min-height: 300px;
-  object-fit: contain;
-  margin-top:  -7rem;
-  z-index: -1;
-}
+
 
 .detalles .description{
   font-size: 1.1rem;
