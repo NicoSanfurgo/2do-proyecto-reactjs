@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import {Paginas} from "./components/Paginas";
 import { DataProvider } from "./context/Dataprovider"
 import {Carrito} from "./components/Carrito/Index"
-
+ 
 
 function App() {
   return (
