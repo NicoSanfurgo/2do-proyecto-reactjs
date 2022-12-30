@@ -19,7 +19,6 @@ export const ProductosLista = () => {
               title={producto.title}
               price={producto.price}
               image={producto.image}
-              category={producto.category}
               detalle={producto.detalle}
               cantidad={producto.cantidad}
               id={producto.id}

@@ -36,3 +36,43 @@
     transform: rotate(360deg);
   }
 }
+
+
+.row:first-child{
+  margin-bottom: 100px;
+}
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.row:nth-child(2) {
+  display: flex;
+}
+
+
+.row:nth-child(2) .col {
+  padding: 0 15px;
+}
+.row:nth-child(2) .col:first-child{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.btn{
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: max-content;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.btn:hover {
+  font-weight: bold;
+}
+
+.row:nth-child(2) .col:last-child{
+  flex: 3;
+}

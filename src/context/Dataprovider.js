@@ -1,15 +1,18 @@
 import React, { createContext, useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import Data from './Data'
 
-export const DataContext = createContext();
 
+
+export const DataContext = createContext();
 export const DataProvider = (props) => {
 	const [productos, setProductos] = useState([]);
 	const [menu, setMenu] = useState(false)
 	const [carrito, setCarrito] =useState([])
 	const [total, setTotal] = useState(0)
 
-	console.log(carrito)
+
+	
 
   useEffect(() => {
 		const producto = Data.items 
