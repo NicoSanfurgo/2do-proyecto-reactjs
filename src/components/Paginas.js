@@ -5,6 +5,8 @@ import { ProductosDetalles } from './productos/ProductosDetalles';
 import { Remeras } from './Remeras/Remeras';
 import { Figuras } from './Figuras/Figuras';
 
+import { CartFinish } from './Carrito/CartFinish';
+
 export const Paginas = () => {
   return (
       <Routes>
@@ -13,6 +15,7 @@ export const Paginas = () => {
         <Route exact path='/producto/:id' element={<ProductosDetalles />} />
         <Route exact path='/remeras' element={<Remeras />} />
         <Route exact path='/figuras' element={<Figuras />} />
+        <Route exact path='/cart' element={<CartFinish />} />
       </Routes>
   )
 }

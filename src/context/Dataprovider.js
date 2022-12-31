@@ -1,7 +1,7 @@
 import React, { createContext, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Data from './Data'
-
+import {collection, doc, getDocs, getFirestore} from 'firebase/firestore';
 
 
 export const DataContext = createContext();
@@ -12,7 +12,16 @@ export const DataProvider = (props) => {
 	const [total, setTotal] = useState(0)
 
 
-	
+	useEffect(()=>{
+		const db = getFirestore();
+
+		const itemRef = collection(db,"item")
+
+		getDocs(itemRef).then((result) =>{
+			
+			setProductos(result.docs.map((doc)=>({id:doc.id,...doc.data()})))
+		})
+	},[])
 
   useEffect(() => {
 		const producto = Data.items 

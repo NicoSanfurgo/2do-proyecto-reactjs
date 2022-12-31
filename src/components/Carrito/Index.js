@@ -2,6 +2,9 @@ import React, { useContext } from 'react'
 import card from "../../images/Logo.png"
 import { DataContext } from "../../context/Dataprovider"
 
+import { Link } from 'react-router-dom';
+import { CartFinish } from './CartFinish';
+
 export const Carrito = () => {
     const value = useContext(DataContext);
     const [menu, setMenu] = value.menu;
@@ -30,7 +33,7 @@ export const Carrito = () => {
       }
   
       const removeProducto = id =>{
-          if(window.confirm("¿Quieres suspender el producto?")){
+          if(window.confirm("¿Quieres eliminar el producto?")){
               carrito.forEach((item, index)=>{
                   if(item.id === id){
                       item.cantidad = 1;
@@ -55,41 +58,38 @@ export const Carrito = () => {
           <h2>Su Carrito</h2>
           <div className="carrito__center">
                       {
-                      
-                      
                       carrito.length === 0 ? <h2 style={{textAlign: "center", fontSize: "3rem"}}>Carrito Vacio</h2> :<>
                       {
                       carrito.map((producto) => (
-              <div className="carrito__item" key={producto.id}>
-                <img src={producto.image} alt={producto.title} />
-                <div>
-                  <h3> {producto.title} </h3>
-                  <p className="price">${producto.price}</p>
-                </div>
-                <div>
-                                  <box-icon 
-                                      onClick={() => increase(producto.id)} name="up-arrow" 
-                                      type="solid"
-                                      />
-                  <p className="cantidad">{producto.cantidad}</p>
-                                  <box-icon 
-                                      onClick={() => reduce(producto.id)} 
-                                      name="down-arrow" 
-                                      type="solid" 
-                                      />
-                </div>
-                              <div 
-                              onClick={() => removeProducto(producto.id)} 
-                              className="remove__item"
-                              >
-                  <box-icon name="trash" />
-                </div>
-              </div>
+                      <div className="carrito__item" key={producto.id}>
+                        <img src={producto.image} alt={producto.title} />
+                        <div>
+                          <h3> {producto.title} </h3>
+                          <p className="price">${producto.price}</p>
+                        </div>
+                        <div>
+                          <box-icon 
+                            onClick={() => increase(producto.id)} name="up-arrow" 
+                            type="solid"
+                          />
+                          <p className="cantidad">{producto.cantidad}</p>
+                          <box-icon 
+                            onClick={() => reduce(producto.id)} 
+                            name="down-arrow" 
+                            type="solid" 
+                          />
+                      </div>
+                        <div 
+                          onClick={() => removeProducto(producto.id)} 
+                          className="remove__item"
+                        >
+                          <box-icon name="trash" />
+                        </div>
+          </div>
                       ))
                   };
-                      
                       </>
-                      }
+                     }
           </div>
   
           <div className="carrito__footer">
