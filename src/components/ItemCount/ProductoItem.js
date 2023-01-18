@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { DataContext } from '../../context/Dataprovider'
+import { DataContext } from '../../Context/Dataprovider'
 
 export const ProductoItem = ({
   id,

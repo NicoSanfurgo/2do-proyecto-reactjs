@@ -1,5 +1,5 @@
 import React from 'react'
-import { DataContext } from '../../context/Dataprovider'
+import { DataContext } from '../../Context/Dataprovider'
 import './CartFinish.css'
 import {addDoc, collection,getFirestore} from 'firebase/firestore'
 

@@ -1,8 +1,8 @@
 import React, {useContext} from 'react'
-import { DataContext } from '../../context/Dataprovider'
-import { ProductoItem } from './ProductoItem'
+import { DataContext } from '../../Context/Dataprovider'
+import { ProductoItem } from '../ItemCount/ProductoItem'
 
-export const ProductosLista = () => {
+export const Item = () => {
   const value = useContext(DataContext)
   const [productos] = value.productos
 

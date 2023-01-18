@@ -1,0 +1,18 @@
+.navbar{
+    background-color: antiquewhite;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar__menu{
+    margin:16px;
+}
+
+.navbar__category-link{
+    margin-top: 10px;
+    margin-left: 16px;
+    margin-right: 16px ;
+    display: flex;
+    justify-content: center;
+}

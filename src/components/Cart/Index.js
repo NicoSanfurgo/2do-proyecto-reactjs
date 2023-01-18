@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import card from "../../images/Logo.png"
-import { DataContext } from "../../context/Dataprovider"
+import { DataContext } from "../../Context/Dataprovider"
 
 import { Link } from 'react-router-dom';
-import { CartFinish } from './CartFinish';
+import { CartFinish } from '../CartFinish/CartFinish';
 
 export const Carrito = () => {
     const value = useContext(DataContext);

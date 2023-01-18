@@ -1,20 +1,20 @@
-import remera1 from '../images/Remeras/DarkSouls1.jpg'
-import remera2 from '../images/Remeras/Doom1.jpg'
-import remera3 from '../images/Remeras/gow1.webp'
-import remera4 from '../images/Remeras/DragonBall1.jpg'
-import remera5 from '../images/Remeras/mk1.webp'
-import remera6 from '../images/Remeras/Stalker1.webp'
+import remera1 from './images/Remeras/DarkSouls1.jpg'
+import remera2 from './images/Remeras/Doom1.jpg'
+import remera3 from './images/Remeras/gow1.webp'
+import remera4 from './images/Remeras/DragonBall1.jpg'
+import remera5 from './images/Remeras/mk1.webp'
+import remera6 from './images/Remeras/Stalker1.webp'
 
-import figura1 from '../images/Figuras/Baldur1.jpg'
-import figura2 from '../images/Figuras/CaballeroFaraam1.webp'
-import figura3 from '../images/Figuras/Sekiro1.webp'
-import figura4 from '../images/Figuras/Enfermera1.jpg'
-import figura5 from '../images/Figuras/PyramidHead1.jpg'
-import figura6 from '../images/Figuras/Heather1.jpg'
+import figura1 from './images/Figuras/Baldur1.jpg'
+import figura2 from './images/Figuras/CaballeroFaraam1.webp'
+import figura3 from './images/Figuras/Sekiro1.webp'
+import figura4 from './images/Figuras/Enfermera1.jpg'
+import figura5 from './images/Figuras/PyramidHead1.jpg'
+import figura6 from './images/Figuras/Heather1.jpg'
 
 
 
-export  const Categorias = [
+export  const categorias = [
     {
       name:'REMERAS',
       id:1,
@@ -27,11 +27,11 @@ export  const Categorias = [
     }
   ]
 
-const data = {
+export const Data = {
     status: "success",
     items: [
         {
-            id: 1,
+            id: 13,
             title:'Remera Diseño Dark Souls',
             price: 1300,
             image: remera1,
@@ -40,7 +40,7 @@ const data = {
             cantidad: 1,
         },
         {
-            id: 2,
+            id: 14,
             title:'Figura De Baldur',
             price: 2300,
             image: figura1,
@@ -49,7 +49,7 @@ const data = {
             cantidad: 1,
         },
         {
-            id: 3,
+            id: 15,
             title:'Remera Diseño DOOM',
             price: 1300,
             image: remera2,
@@ -141,4 +141,8 @@ const data = {
     ]
 };
 
-export default data;
+export const menus = [{
+    name:'Inicio',
+    href:'/'
+  },
+  ]

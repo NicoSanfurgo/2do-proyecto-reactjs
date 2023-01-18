@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Data from './Data'
+import {Data} from '../Mock'
 import {collection, doc, getDocs, getFirestore} from 'firebase/firestore';
 
 
