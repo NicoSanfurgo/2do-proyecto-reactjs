@@ -11,9 +11,10 @@ import { DataProvider } from "./Context/Dataprovider"
 import {Carrito} from "./components/Cart/Index"
 import { Item } from './components/Item/Item';
 import { ProductosDetalles } from './components/ItemDetail/ProductosDetalles';
-import { CartFinish } from './components/CartFinish/CartFinish';
-import menus from "./Mock";
+import CartFinish from './components/CartFinish/CartFinish';
+import {menus} from "./Mock";
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import logo from './images/Logo.png'
 
 function Paginas() {
   const [categorias, setCategorias] = useState([]);
@@ -24,10 +25,8 @@ function Paginas() {
 
     getDocs(categoryCollection).then((result) => {
       if (result.size === 0) {
-        console.log("no retorna nada");
       }
       setCategorias(result.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
-      console.log(categorias);
     });
   }, []);
 
@@ -35,6 +34,9 @@ function Paginas() {
   return (
     <DataProvider>
     <div className="App">
+    <div className='logo'>
+      <img src={logo} alt="logo" width="130"/>
+    </div>
       <BrowserRouter>
       <Header menus={menus} categorias={categorias} />
         <Routes>

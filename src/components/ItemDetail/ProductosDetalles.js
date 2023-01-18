@@ -1,7 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react'
 import { DataContext } from "../../Context/Dataprovider";
 import { useParams } from "react-router-dom";
-import { ProductoItem } from "../ItemCount/ProductoItem";
 import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 export const ProductosDetalles = () => {
@@ -9,17 +8,15 @@ export const ProductosDetalles = () => {
   const [productos] = value.productos;
   const addCarrito = value.addCarrito;
   const [detalle, setDetalle] = useState([])
-  const [url, setUrl]= useState(0)
-  const [images, setImages] = useState('')
+  const [setUrl]= useState(0)
   const params = useParams();
 
   const { id } = useParams();
-  const [producto, setProducto] = useState();
+  const [ setProducto] = useState();
 
   let item = 0;
 
   useEffect(() =>{
-    console.log('re render' , params.id)
     item=0;
     productos.forEach(producto =>{
       if(producto.id === parseInt(params.id)){

@@ -1,12 +1,9 @@
 import { useState } from 'react';
 import {
   collection,
-  doc,
-  getDoc,
   getDocs,
   getFirestore,
 } from "firebase/firestore";
-import {Data, categorias} from '../../Mock';
 import {Item} from '../Item/Item';
 import './ItemListContainer.css';
 import { useParams } from 'react-router-dom';
@@ -19,7 +16,7 @@ const ItemListContainer = ({}) => {
 
   const FilterCategory = () => {
     if (id && itemcopy) {
-      const newProductos = itemcopy.filter((p) => p.category == id);
+      const newProductos = itemcopy.filter((p) => p.category === id);
       return newProductos;
     } else {
       return itemcopy;
@@ -29,7 +26,6 @@ const ItemListContainer = ({}) => {
   useEffect(() => {
     const filtro = FilterCategory();
     setItem(filtro);
-    console.log({ id, filtro });
   }, [id]);
 
   useEffect(() => {

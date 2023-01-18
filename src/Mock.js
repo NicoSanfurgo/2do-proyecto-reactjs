@@ -16,14 +16,12 @@ import figura6 from './images/Figuras/Heather1.jpg'
 
 export  const categorias = [
     {
-      name:'REMERAS',
+      name:'Remeras',
       id:1,
-      category:"Remeras",
     },
     {
-      name:'FIGURAS',
+      name:'Figuras',
       id:2,
-      category:"Figuras",
     }
   ]
 

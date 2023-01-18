@@ -1,13 +1,12 @@
 import React, { useContext } from 'react'
-import logo from '../../images/Logo.png'
 import { Link } from 'react-router-dom'
 import { DataContext } from "../../Context/Dataprovider"
 import './Navbar.css';
-
+import '../../index.css'
 export const Header = ({menus, categorias}) => {
     const value = useContext(DataContext);
     const [menu, setMenu] = value.menu;
-    const [carrito, setCarrito] = value.carrito
+    const [carrito] = value.carrito
 
 
 
